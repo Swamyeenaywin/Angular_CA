@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="col-md-12">
+        <form class="form-inline" #saveForm="ngForm" (ngSubmit)="formSaveGiphy(saveForm.valid)"> 
+            <div class="row">
+                <div class="col-md-3" *ngFor="let i of imageArray; let idx =index">
+
+                    <input type="checkbox"
+                     id="giphy[{{idx}}]" 
+                     name="giphy"
+                   value="{{i.images.downsized.url}}" 
+                   (change)="logCheckbox($event)"
+                    ngModel>
+
+                    <img src={{i.images.downsized.url}} height="200" width="200">
+                    <div><h1></h1></div>
+                </div>
+            </div>
+            <div class="row">
+                <h1></h1>
+            </div>
+            <div class="row" *ngIf="imageArray.length>0">
+                <div class="row">
+                    <button type="button" class="btn btn-success" (click)="nextPage()">Next 8</button>
+                </div>
+                <div class="row">
+                    <h1></h1>
+                </div>
+                <div class="row">
+                    Username:
+                    <input type="text" name="username" placeholder="username" required ngModel>
+                    <button type="submit" class="btn btn-success" [disabled]="saveForm.invalid" >SAVE!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

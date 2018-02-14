@@ -1,0 +1,14 @@
+<div class="red-border container">
+  <form class="form-inline" #retrieve="ngForm" (ngSubmit)="giphyForUser()">
+    <div class="row">
+      Username:
+      <input type="text" placeholder="username" name="user" required ngModel/>
+    </div>
+    <div class="row">
+      <h1></h1>
+    </div>
+    <div class="row">
+      <button class="btn btn-success" type="submit">Retrieve image</button>
+    </div>
+    </form>
+</div>

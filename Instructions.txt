@@ -1,0 +1,13 @@
+To see working in Development mode:
+
+-client-app
+1. Use own API Key in "giphy.service.ts"
+2. Run in cmd: ng serve --proxy-config proxy-config.js
+*Make sure port (ie. target:'http://localhost:34286' is same as the server-app)
+
+-server-app (Done with NetBeans)
+1. Configure the Paraya server (configuration as per videos)
+2. start server-app
+
+DB
+1. create "angularca" db in database. See "giphyDB.mwb"

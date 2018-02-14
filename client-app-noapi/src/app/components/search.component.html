@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="col-md-12">
+        <form class="form-inline" #searchForm="ngForm"
+              (ngSubmit)="searchGiphyComponent()">
+    
+          <div class="form-group">
+            <label for="search-text" class="control-label">Search Giphy: </label>
+            <input type="text" id="search-text" name="searchText" class="form-control"
+                ngModel required>
+          </div>
+    
+          <button type="submit" class="btn btn-success">SEARCH!</button>
+    
+        </form>
+</div>
